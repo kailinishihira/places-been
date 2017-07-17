@@ -1,0 +1,12 @@
+#list-properties {
+  display: none;
+}
+
+h2 {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+h2:hover {
+  text-decoration: underline;
+}
