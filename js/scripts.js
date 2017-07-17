@@ -9,6 +9,10 @@ function Destination(locations, landmarks, season, duration, notes) {
   this.notes = notes;
 }
 
+Destination.prototype.seasonPlusLocation = function() {
+  return this.season + " in " + this.locations;
+}
+
 
 // UI Logic -->
 
@@ -36,9 +40,8 @@ $("#output-properties").append("<li><h2><span class='place-results'>" + newDesti
 
 $(".place-results").last().click(function() {
   $("#list-properties").toggle();
-  $(".new-location").text(newDestination.locations);
+  $(".new-location").text(newDestination.seasonPlusLocation());
   $(".new-landmarks").text(newDestination.landmarks);
-  $(".new-season").text(newDestination.season);
   $(".new-duration").text(newDestination.duration);
   $(".new-notes").text(newDestination.notes);
 });
